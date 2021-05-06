@@ -62,8 +62,7 @@ def test1():
     try :
 
         if request.form and request.method == 'POST':
-            #username = request.form['input1']
-            #password = request.form['input2']
+
 
             ####################################
 
