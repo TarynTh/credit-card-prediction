@@ -1,0 +1,158 @@
+<html>
+<head>
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+<body>
+
+<h1>Churn Prediction</h1>
+
+<div class="row">
+  <div class="column" id="col1"> 
+
+      <form action="/" enctype="multipart/form-data" method="POST">
+
+      <label for="Cus_age">Age:</label>
+      <input type="number" id="Cus_age" name="Cus_age">
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" checked="checked" >
+      <label for="other">Other</label><br><br>
+
+      <label for="Cus_num">Client number:</label>
+      <input type="number" id="Cus_num" name="Cus_num">
+
+      <label for="Card_cate">Card Category:</label>
+      <select name="Card_cate" id="Card_cate">
+        <option disabled selected value>select an option</option>
+        <option value="blue">Blue</option>
+        <option value="silver">Silver</option>
+        <option value="gold">Gold</option>
+        <option value="platinum">Platinum</option>
+      </select><br><br>
+
+      <label for="Marital_sta">Marital Status:</label>
+      <select name="Marital_sta" id="Marital_sta">
+        <option disabled selected value>select an option</option>
+        <option value="married">Married</option>
+        <option value="single">Single</option>
+        <option value="divorced">Divorced</option>
+      </select>
+
+      <label for="Dep_num">Number of dependents:</label>
+      <input type="number" id="Dep_num" name="Dep_num"><br>
+
+      <p>
+      <label for="Cus_edu">Educational Qualification:</label>
+      <select name="Cus_edu" id="Cus_edu">
+        <option disabled selected value>select an option</option>
+        <option value="uneducated">Uneducated</option>
+        <option value="high_School">High School</option>
+        <option value="college">College</option>
+        <option value="graduate">Graduate</option>
+        <option value="Post_graduate">Post-Graduate</option>
+        <option value="doctorate">Doctorate</option>
+      </select>
+
+
+      
+
+      <label for="Inc_cate">Income Category:</label>
+      <select name="Inc_cate" id="Inc_cate">
+        <option disabled selected value>select an option</option>
+        <option value="unknown">Unknown</option>
+        <option value="ls124k">Less than $40K</option>
+        <option value="40k-60k">$40K - $60K</option>
+        <option value="60k-80k">$60K - $80K</option>
+        <option value="80k-120k">$80K - $120K</option>
+        <option value="mt120k">$120K +</option>
+      </select><br>
+
+      </p>
+
+      <label for="Credit_Limit">Credit Limit:</label>
+      <input type="number" id="Credit_Limit" name="Credit_Limit">
+
+      <label for="Total_Revolving_Bal">Total Revolving Balance:</label>
+      <input type="number" id="Total_Revolving_Bal" name="Total_Revolving_Bal"><br><br>
+
+      <label for="Month_ob">Months on book:</label>
+      <input type="number" id="Month_ob" name="Month_ob">
+
+      <label for="Total_Relationship_Count">Total Relationship Count:</label>
+      <input type="number" id="Total_Relationship_Count" name="Total_Relationship_Count"><br><br>
+
+      <label for="Months_Inactive_12_mon">Months Inactive 12 months:</label>
+      <input type="number" id="Months_Inactive_12_mon" name="Months_Inactive_12_mon"><br><br>
+
+      <label for="Contacts_Count_12_mon">Contacts Count 12 months:</label>
+      <input type="number" id="Contacts_Count_12_mon" name="Contacts_Count_12_mon"><br><br>
+
+      <label for="Avg_Open_To_Buy">Open to Buy Credit Line (Average of last 12 months):</label>
+      <input type="number" id="Avg_Open_To_Buy" name="Avg_Open_To_Buy"><br><br>
+
+      <label for="Total_Amt_Chng_Q4_Q1">Change in Transaction Amount (Q4 over Q1):</label>
+      <input type="number" step="0.001" id="Total_Amt_Chng_Q4_Q1" name="Total_Amt_Chng_Q4_Q1"><br><br>
+
+      <label for="Total_Trans_Amt">Total Transaction Amount (Last 12 months):</label>
+      <input type="number" step="0.001" id="Total_Trans_Amt" name="Total_Trans_Amt"><br><br>
+
+      <label for="Total_Trans_Ct">Total Transaction Count (Last 12 months):</label>
+      <input type="number" id="Total_Trans_Ct" name="Total_Trans_Ct"><br><br>
+
+      <label for="Total_Ct_Chng_Q4_Q1">Change in Transaction Count (Q4 over Q1):</label>
+      <input type="number" step="0.001" id="Total_Ct_Chng_Q4_Q1" name="Total_Ct_Chng_Q4_Q1"><br><br>
+
+      <label for="Avg_Utilization_Ratio">Average Card Utilization Ratio:</label>
+      <input type="number" step="0.001" id="Avg_Utilization_Ratio" name="Avg_Utilization_Ratio"><br><br>
+
+      <br><br>
+      <input type="submit" value="Predict" id="button">
+
+
+    </form>
+
+    {% if error %}
+    <p class=error><strong>Error:</strong> {{ error }}
+    <h1>user and password not be empty !!!</h1>
+
+      {% endif %}
+
+      {% if show %}
+
+      
+      {% endif %}
+  </div>
+
+  <div class="column" id = col2 >
+    <!-- <h2>Column 2</h2> -->
+    <img src={{full_filename}} alt="light" width="125" height="100" >
+    <!-- <img src="http:\\localhost\templates\b3.jpg" width="500" height="333" onerror="myFunction()"/> -->
+
+
+
+
+    <br>
+
+    <br>
+    <p1>{{y_pred}}</p1>
+    <p2>{{y_pred_2}}</p2><br>
+
+    <br>
+
+    <p6>Suggestion:</p6><br>
+    <p5>{{offer}}</p5><br>
+    <p3>{{suggestion}}</p3><br>
+    <p3>{{suggestion2}}</p3><br>
+    <p3>{{suggestion3}}</p3>
+  </div>
+
+
+</div>
+
+</body>
+</html>
+

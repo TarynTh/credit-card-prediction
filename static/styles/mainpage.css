@@ -1,0 +1,125 @@
+#col1 {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  color: wheat;
+  margin-left: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* background-color: black ;opacity:0.3; */
+}
+
+#col2 {
+
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: pink;
+  margin-left: 20px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 4%; */
+  margin-top: 6.5%;
+
+}
+
+p1 {
+  color: rgb(255, 108, 108);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+}
+
+p2 {
+  color: lightgreen;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 200%;
+}
+
+p3 {
+  color: wheat;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+p6 {
+  color: rgb(247, 206, 131);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 150%;
+}
+
+p5 {
+  color: wheat;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 120%;
+}
+
+body {
+    /* background-color: rgb(26, 25, 25); */
+    background-image: url("b3.jpg");
+    background-size: cover;
+    background-color: black;
+    color: wheat;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+  
+h1 {
+  color: rgb(255, 160, 176);
+  margin-left: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 250%;
+}
+
+p {
+  color: wheat;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+
+input { 
+  background-color: rgb(15, 30, 36);
+  color: white;
+}
+
+/* input[type=text] {
+  background-color: #3CBC8D;
+  color: white;
+} */
+
+select { 
+  /* background-color: grey; */   
+  background-color: rgb(15, 30, 36);
+  color:white;
+}
+
+#button { 
+  background-color:goldenrod;
+  color:black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 4%;
+  font-size: medium;
+}
+
+
+
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 45%;
+  padding: 10px;
+  
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
